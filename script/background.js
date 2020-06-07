@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-let IMG_NUMBER = 5;
+let IMG_NUMBER = 6;
 let InitialNumb = 1;
 let paintingNumb=1;
 
