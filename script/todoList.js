@@ -10,13 +10,16 @@ let toDosArray = [];
 function handleSpanEvent(event){
     event.preventDefault();
     const currentColor = event.target.style.color;
-    if(currentColor === "blue")
+    const target = event.target;
+
+    if(target.classList.contains("giveActive"))
     {
-        event.target.style.color = "";
+        event.target.classList.remove("giveActive");
     }
     else{
-        event.target.style.color = "blue";
+        event.target.classList.add("giveActive");
     }
+    saveToDos();
 }
 
 
@@ -90,10 +93,8 @@ function loadToDo(){    //local storage에 저장형태가 string 형태이므�
     if(todos !== null)
     {
         const parsedToDos = JSON.parse(todos);
-
-        parsedToDos.forEach(function(todoss){
-            addToDoList(todoss.text);
-        })
+        
+        parsedToDos.forEach((todoss)=> addToDoList(todoss.text));
      
     }
 }
