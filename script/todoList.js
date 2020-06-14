@@ -34,7 +34,10 @@ function handleSpanEvent(event){
 const checkActive = (OBJ,span) =>{
   
     if(OBJ.isFin === "yes"){
-        span.style.color = "blue";
+        span.classList.add("giveActive");
+    }
+    else{
+        span.classList.remove("giveActive");
     }
 }
 ///유용한 툴  == > console.dir(event.target);
