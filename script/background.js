@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-let IMG_NUMBER = 6;
+let IMG_NUMBER = 9;
 let InitialNumb = 1;
 let paintingNumb=1;
 
@@ -26,7 +26,7 @@ function remover(image){
 function fading(image){
     
     InitialNumb = InitialNumb +1;
-    if(InitialNumb > 5)
+    if(InitialNumb > 9)
     {
         InitialNumb =1;
     }

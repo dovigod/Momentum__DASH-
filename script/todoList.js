@@ -69,7 +69,6 @@ function handleSubmit(event){       //이벤트 핸들러,,,,  'currentvalue'에
 }
 function addToDoList(tmp = fuck ,OBJ = fucked){   ///text의 값은 current value
 
-    console.log(OBJ.isFin);
     const li = document.createElement("li");  //li클래스를 만든다
     const delbtn = document.createElement("button");  //버튼 클래스를 만든다  
     const span = document.createElement("span");
@@ -80,7 +79,7 @@ function addToDoList(tmp = fuck ,OBJ = fucked){   ///text의 값은 current valu
         id : newID,
         isFin: isActive 
     };
-    console.log(OBJ);
+ 
 
     delbtn.innerText = "❌";  //버튼 값에 x를 
     delbtn.style.background = "none";
@@ -99,7 +98,7 @@ function addToDoList(tmp = fuck ,OBJ = fucked){   ///text의 값은 current valu
     li.id = newID;
     toDoList.appendChild(li);  //ul밑에 li를 붙여줌
     toDosArray.push(toDoObj);
-    console.log(OBJ);
+ 
 
     checkActive(toDoObj , span);
 
